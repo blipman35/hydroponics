@@ -1,3 +1,6 @@
+#This project is creating a python script that uses raspberry pi to control lights
+#and irrigation for hydroponic buckets.
+
 import datetime
 import time
 
@@ -8,15 +11,17 @@ WAIT_TIME = 5400 #number of seconds to wait until lights and water are turned on
 def turnon():
     print('Lights and water are on')
     #replace with giop pins
+
 def turnoff():
     print('Lights and water are off')
     #replace with giop pins
+
 while True:
 
-    current_time = datetime.datetime.now()
+    current_time = datetime.datetime.now() #sets the current time to a variable
 
-    turnon()
-    time.sleep(WATER_LIGHTS_FOR)
+    turnon() #turns on the water and light
+    time.sleep(WATER_LIGHTS_FOR) #Waits specified amount of time
 
-    turnoff()
-    time.sleep(WATER_LIGHTS_FOR)
+    turnoff() #turns off the water and light
+    time.sleep(WATER_LIGHTS_FOR) #Waits specified amount of time
